@@ -2,21 +2,19 @@
 #define PS4_INT_H
 
 #include "sdkconfig.h"
+#include "ps4.h"
+#include <stdint.h>
 
-/** Check if the project is configured properly */
-#ifndef ARDUINO_ARCH_ESP32
 
 /** Check the configured blueooth mode */
-#ifdef CONFIG_BTDM_CONTROLLER_MODE_BTDM
+#ifdef CONFIG_BTDM_CTRL_MODE_BTDM
 #define BT_MODE ESP_BT_MODE_BTDM
-#elif defined CONFIG_BTDM_CONTROLLER_MODE_BR_EDR_ONLY
+#elif defined CONFIG_BTDM_CTRL_MODE_BR_EDR_ONLY
 #define BT_MODE ESP_BT_MODE_CLASSIC_BT
 #else
 #error \
   "The selected Bluetooth controller mode is not supported by the ESP32-PS4 module"
 #endif
-
-#endif  // ARDUINO_ARCH_ESP32
 
 /** ESP-IDF compatibility configuration option choices */
 #define IDF_COMPATIBILITY_MASTER_21165ED 3

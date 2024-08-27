@@ -1,8 +1,6 @@
 #ifndef PS4Controller_h
 #define PS4Controller_h
 
-#include "Arduino.h"
-
 extern "C" {
 #include "ps4.h"
 }

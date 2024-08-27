@@ -1,6 +1,7 @@
 #include "ps4.h"
 
 #include <esp_system.h>
+#include <esp_mac.h>
 #include <string.h>
 
 #include "ps4_int.h"
