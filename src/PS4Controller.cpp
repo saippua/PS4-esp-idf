@@ -29,10 +29,6 @@ bool PS4Controller::begin() {
   ps4SetEventObjectCallback(this, &PS4Controller::_event_callback);
   ps4SetConnectionObjectCallback(this, &PS4Controller::_connection_callback);
 
-  if (nvs_flash_init() != ESP_OK) {
-    ESP_LOGE(TAG, "nvs_flash_init failed");
-  }
-
   esp_bt_controller_status_t status;
   if ((status = esp_bt_controller_get_status()) != ESP_BT_CONTROLLER_STATUS_ENABLED) {
     printf("BT Controller status: %d\n", status);
