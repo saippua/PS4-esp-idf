@@ -1,3 +1,7 @@
+# About this fork
+The purpose of this fork is to provide an arduinoless implementation of the original library.
+This fork (specifically the arduinoless branch) can be used in a pure ESP-IDF environment without any of the arduino headers.
+
 # PS4-esp32
 Use a PS4 controller with an ESP32
 
